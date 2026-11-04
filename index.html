@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | El Royale Water Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="login-container">
+
+    <!-- LEFT SIDE -->
+    <section class="left-panel">
+
+      <div class="brand">
+        <div class="brand-icon">💧</div>
+        <div>
+          <h3>El Royale</h3>
+          <small>WATER MONITOR</small>
+        </div>
+      </div>
+
+      <div class="intro">
+        <span class="eyebrow">
+          ONE TANK. A CLEARER PICTURE.
+        </span>
+
+        <h1>SMART WATER<br>MONITORING</h1>
+
+        <p>
+          Monitor your tank, track water levels,
+          and help prevent overflow with ease.
+        </p>
+
+        <div class="tank-card">
+          <div class="card-header">
+            <h3>Storage Tank</h3>
+            <span class="demo-badge">Demo Data</span>
+          </div>
+
+          <div class="tank-content">
+            <div class="tank">
+              <div class="water"></div>
+            </div>
+
+            <div class="tank-info">
+              <small>WATER LEVEL</small>
+              <h2>72%</h2>
+              <p>Normal Level</p>
+
+              <small>AUTO SHUT-OFF</small>
+              <strong class="enabled">✓ Enabled</strong>
+              <p>Closes at full capacity</p>
+            </div>
+          </div>
+
+          <div class="notice">
+            Automatic shut-off helps prevent
+            water tank overflow.
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <strong>El Royale Hotelier Training Center Inc.</strong>
+        <p>IoT-Based Water Shut-Off & Monitoring System</p>
+      </footer>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section class="right-panel">
+
+      <div class="login-box">
+
+        <div class="login-icon">🔒</div>
+
+        <h2>Welcome Back!</h2>
+        <p class="subtitle">
+          Sign in to access your water monitoring dashboard.
+        </p>
+
+        <form id="loginForm">
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          >
+
+          <label for="password">Password</label>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+
+            <button type="button" id="togglePassword">
+              Show
+            </button>
+          </div>
+
+          <div class="options">
+            <label class="remember">
+              <input type="checkbox" id="remember">
+              Remember me
+            </label>
+
+            <a href="forgot-password.php" id="forgotLink">
+              Forgot Password?
+            </a>
+          </div>
+
+          <button type="submit" class="login-btn">
+            Sign In
+          </button>
+
+          <p id="formMessage" role="status"></p>
+
+        </form>
+
+        <p class="signup-text">
+          Don't have an account?
+          <a href="/watermonitoring/signup.html">
+            Request an Account
+            </a>
+        </p>
+
+        <div class="security-note">
+          <strong>For Authorized Personnel Only</strong>
+          <p>
+            Access is restricted to approved
+            administrators and maintenance personnel.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

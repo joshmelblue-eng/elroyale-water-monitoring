@@ -1,0 +1,22 @@
+
+# Private configuration
+.env
+.env.*
+!.env.example
+config.local.php
+db.local.php
+
+# Logs and database backups
+*.log
+*.sql
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Local database testing
+test_connection.php

@@ -1,0 +1,453 @@
+
+/* ========================================
+   USER MANAGEMENT PAGE
+   Shared layout: dashboard.css
+======================================== */
+
+/* SUMMARY CARDS */
+
+.user-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+/* SECTION CARDS */
+
+.users-card,
+.requests-card,
+.users-info-card {
+  margin-bottom: 25px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.section-header h3 {
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: #8298aa;
+  font-size: 12px;
+}
+
+/* BUTTONS */
+
+.primary-btn,
+.save-btn {
+  background: #258bd7;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary-btn:hover,
+.save-btn:hover {
+  background: #1676bb;
+}
+
+.secondary-btn {
+  background: #f1f7fc;
+  color: #71899e;
+  border: none;
+  border-radius: 9px;
+  padding: 11px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #e9f4ff;
+  color: #258bd7;
+}
+
+/* FILTERS */
+
+.user-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.user-filters input,
+.user-filters select {
+  border: 1px solid #e3edf5;
+  background: white;
+  color: #71899e;
+  border-radius: 9px;
+  padding: 11px 13px;
+  font-size: 12px;
+  outline: none;
+  font-family: inherit;
+}
+
+.user-filters input:focus,
+.user-filters select:focus {
+  border-color: #258bd7;
+}
+
+#searchUser {
+  flex: 1;
+  min-width: 190px;
+}
+
+/* TABLE */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.users-table thead {
+  background: #f4f8fc;
+}
+
+.users-table th {
+  padding: 15px;
+  font-size: 12px;
+  color: #71899e;
+  border-bottom: 1px solid #e3edf5;
+}
+
+.users-table td {
+  padding: 15px;
+  font-size: 12px;
+  color: #193b59;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.users-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.table-footer {
+  color: #8298aa;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+/* BADGES */
+
+.user-badge {
+  display: inline-block;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.user-badge.active {
+  background: #e6f7ef;
+  color: #299b74;
+}
+
+.user-badge.inactive {
+  background: #fde8e8;
+  color: #d94c4c;
+}
+
+.role-badge {
+  display: inline-block;
+  background: #e9f4ff;
+  color: #258bd7;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.pending-count {
+  background: #fff2dc;
+  color: #c58a27;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* TABLE ACTIONS */
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.table-btn {
+  border: none;
+  padding: 8px 11px;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.edit-btn,
+.approve-btn {
+  background: #e9f4ff;
+  color: #258bd7;
+}
+
+.toggle-btn {
+  background: #f1f7fc;
+  color: #71899e;
+}
+
+.reject-btn {
+  background: #fde8e8;
+  color: #d94c4c;
+}
+
+.table-btn:hover {
+  filter: brightness(0.96);
+}
+
+.table-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* EMPTY TABLE */
+
+.empty-state {
+  text-align: center;
+  color: #8298aa;
+  padding: 35px 15px;
+  font-size: 12px;
+}
+
+/* INFO CARD */
+
+.users-info-card p {
+  color: #71899e;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* DIALOGS */
+
+.user-dialog,
+.action-dialog {
+  border: none;
+  border-radius: 16px;
+  padding: 30px;
+  width: min(90%, 450px);
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  box-shadow: 0 15px 40px #0002;
+}
+
+.user-dialog::backdrop,
+.action-dialog::backdrop {
+  background: #102d4680;
+}
+
+.user-dialog h2,
+.action-dialog h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.dialog-description,
+.action-dialog p {
+  color: #71899e;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#userForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#userForm label {
+  color: #193b59;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#userForm input:not([type="hidden"]),
+#userForm select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e3edf5;
+  border-radius: 9px;
+  font-size: 13px;
+  font-family: inherit;
+  margin-bottom: 17px;
+  background: white;
+  color: #193b59;
+}
+
+#userForm input:focus,
+#userForm select:focus {
+  outline: none;
+  border-color: #258bd7;
+}
+
+.form-error {
+  color: #d94c4c;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+.user-dialog .dialog-actions,
+.action-dialog .dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.user-dialog .dialog-actions button,
+.action-dialog .dialog-actions button {
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cancelUser,
+#cancelAction {
+  background: #edf2f7;
+  color: #193b59;
+  border: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .user-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .user-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-filters {
+    flex-direction: column;
+  }
+
+  .user-filters input,
+  .user-filters select,
+  .secondary-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ========================================
+   USER MANAGEMENT ENHANCEMENTS
+======================================== */
+
+/* APPROVE AND REJECT BUTTONS */
+
+.action-btn {
+  border: none;
+  border-radius: 7px;
+  padding: 9px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+  margin-right: 7px;
+}
+
+/* APPROVE */
+
+.approve-btn,
+.action-btn.success {
+  background: #e9f4ff;
+  color: #258bd7;
+}
+
+.approve-btn:hover,
+.action-btn.success:hover {
+  background: #d5ebff;
+  transform: translateY(-1px);
+}
+
+/* REJECT */
+
+.reject-btn,
+.action-btn.danger {
+  background: #fde8e8;
+  color: #d94c4c;
+}
+
+.reject-btn:hover,
+.action-btn.danger:hover {
+  background: #fbd3d3;
+  transform: translateY(-1px);
+}
+
+/* DISABLED BUTTONS */
+
+.action-btn:disabled,
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* SIDEBAR PROFILE */
+
+.sidebar-footer .user-info strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-footer .avatar {
+  flex-shrink: 0;
+}
+
+/* LOGOUT BUTTON */
+
+#logoutBtn {
+  transition: color 0.2s ease;
+}
+
+#logoutBtn:hover {
+  color: #d94c4c;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 700px) {
+  .action-btn {
+    margin-bottom: 6px;
+  }
+}
